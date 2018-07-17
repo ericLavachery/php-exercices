@@ -1,4 +1,5 @@
 <?php
+$teou = 'index';
 $videoGames = array("civilization", "GTA", "Quake", "kingdom rush", "Tetris", "shattered colony", "Doom", "pong", "Donkey Kong");
 function showGame($vGame) {
     echo ucwords($vGame) . "<br>";
@@ -83,6 +84,7 @@ $moi[papa] = $papa;
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <?php include 'navig.php'; ?>
 
         <h1>Bonjour <?php echo $_GET['nom']; ?>!</h1>
 

@@ -1,6 +1,28 @@
+body{
+    padding: 30px;
+}
 .warning{
     color: red;
 }
 .info{
     color: #386acb;
+}
+.excuses{
+    border-width: 1px;
+    border-color: #DDDDDD;
+    border-style: solid;
+    padding: 20px;
+    width: 600px;
+}
+.here{
+    color: red;
+}
+.there{
+    color: blue;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
 }
