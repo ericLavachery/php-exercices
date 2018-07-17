@@ -78,48 +78,48 @@ $moi[papa] = $papa;
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>PHP Challenge 1</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <?php include 'navig.php'; ?>
+<head>
+    <meta charset="utf-8">
+    <title>PHP Challenge 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <?php include 'navig.php'; ?>
 
-        <h1>Bonjour <?php echo $_GET['nom']; ?>!</h1>
+    <h1>Bonjour <?php echo $_GET['nom']; ?>!</h1>
 
-        <?php
-        $lengthX = count($videoGames);
-        $x = 0;
-        while($x <= $lengthX) {
-            showGame($videoGames[$x]);
-            $x = $x+1;
-        }
-        ?>
-        <h3>Exercices FUNCTIONS</h3>
-        <?php
-        showYear();
-        showDate();
-        addition(7,4);
-        addition('boudin',64);
-        acronIt('Merci encore, Rudy Demol');
-        aeReplace('sphaerotheca');
-        aeligReplace('sphærotheca');
-        feedback('Ta braguette est ouverte', 'warning');
-        feedback("Attention, t'as oublié de mettre une classe");
-        aleaMots();
-        echo "Le volume d'un cône de rayon 4 et hauteur 2 est : " . volumeCone(4,2) . '<br>';
-        ?>
-        <h3>Exercices ARRAYS</h3>
-        <pre><?php print_r ($famille); ?></pre>
-        <?php echo $team[mp]; ?>
-        <pre><?php print_r ($moi); ?></pre>
-        <p>
-            Il se passe quoi maintenant si je rajoute un élément au tableau "$papa" dont la clef est "fils" et qui équivaut à "$moi"?<br>
-            Une brèche dans l'espace-temps?
-        </p>
-        <p><?php echo "Papa a " . count($papa[hobbies]) . " hobbies. Mais on s'en fout vu que tout le monde va tomber dans la brèche." ?></p>
-        <?php $moi[lastName] = "M'Bala M'Bala"; print_r ($moi); ?>
-        <p>Pas peu fier de porter ce nouveau nom de famille :)</p>
-    </body>
+    <?php
+    $lengthX = count($videoGames);
+    $x = 0;
+    while($x <= $lengthX) {
+        showGame($videoGames[$x]);
+        $x = $x+1;
+    }
+    ?>
+    <h3>Exercices FUNCTIONS</h3>
+    <?php
+    showYear();
+    showDate();
+    addition(7,4);
+    addition('boudin',64);
+    acronIt('Merci encore, Rudy Demol');
+    aeReplace('sphaerotheca');
+    aeligReplace('sphærotheca');
+    feedback('Ta braguette est ouverte', 'warning');
+    feedback("Attention, t'as oublié de mettre une classe");
+    aleaMots();
+    echo "Le volume d'un cône de rayon 4 et hauteur 2 est : " . volumeCone(4,2) . '<br>';
+    ?>
+    <h3>Exercices ARRAYS</h3>
+    <pre><?php print_r ($famille); ?></pre>
+    <?php echo $team[mp]; ?>
+    <pre><?php print_r ($moi); ?></pre>
+    <p>
+        Il se passe quoi maintenant si je rajoute un élément au tableau "$papa" dont la clef est "fils" et qui équivaut à "$moi"?<br>
+        Une brèche dans l'espace-temps?
+    </p>
+    <p><?php echo "Papa a " . count($papa[hobbies]) . " hobbies. Mais on s'en fout vu que tout le monde va tomber dans la brèche." ?></p>
+    <?php $moi[lastName] = "M'Bala M'Bala"; print_r ($moi); ?>
+    <p>Pas peu fier de porter ce nouveau nom de famille :)</p>
+</body>
 </html>
