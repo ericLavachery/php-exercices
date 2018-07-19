@@ -60,20 +60,20 @@ function volumeCone($rayon, $hauteur) {
     return $volume;
 }
 $famille = array('Eric', 'Zazie', 'Vincent', 'Anaïs', 'Eva', 'Mika', 'Beathe', 'Philippe', 'Suzanne', 'Zanga', 'Quentin', 'Chantal', 'Michel', 'Frédéric', 'Thomas', 'Marcelle');
-$team[vc] = 'Vincent Company';
-$team[eh] = 'Eden Hazard';
-$team[mp] = 'Manneken Pis';
-$moi[firstName] = 'Eric';
-$moi[lastName] = 'Lavachery';
-$moi[foot] = FALSE;
-$moi[yearBirth] = 1965;
-$moi[hobbies] = array('MMA', 'Cinéma', 'Politique', 'Musique');
-$papa[firstName] = 'Michel';
-$papa[lastName] = 'Lavachery';
-$papa[foot] = FALSE;
-$papa[yearBirth] = 1936;
-$papa[hobbies] = array('Bois', 'Animaux', 'Art');
-$moi[papa] = $papa;
+$team['vc'] = 'Vincent Company';
+$team['eh'] = 'Eden Hazard';
+$team['mp'] = 'Manneken Pis';
+$moi['firstName'] = 'Eric';
+$moi['lastName'] = 'Lavachery';
+$moi['foot'] = FALSE;
+$moi['yearBirth'] = 1965;
+$moi['hobbies'] = array('MMA', 'Cinéma', 'Politique', 'Musique');
+$papa['firstName'] = 'Michel';
+$papa['lastName'] = 'Lavachery';
+$papa['foot'] = FALSE;
+$papa['yearBirth'] = 1936;
+$papa['hobbies'] = array('Bois', 'Animaux', 'Art');
+$moi['papa'] = $papa;
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +91,7 @@ $moi[papa] = $papa;
     <?php
     $lengthX = count($videoGames);
     $x = 0;
-    while($x <= $lengthX) {
+    while($x < $lengthX) {
         showGame($videoGames[$x]);
         $x = $x+1;
     }
@@ -106,20 +106,20 @@ $moi[papa] = $papa;
     aeReplace('sphaerotheca');
     aeligReplace('sphærotheca');
     feedback('Ta braguette est ouverte', 'warning');
-    feedback("Attention, t'as oublié de mettre une classe");
+    feedback("Attention, t'as oublié de mettre une classe","");
     aleaMots();
     echo "Le volume d'un cône de rayon 4 et hauteur 2 est : " . volumeCone(4,2) . '<br>';
     ?>
     <h3>Exercices ARRAYS</h3>
     <pre><?php print_r ($famille); ?></pre>
-    <?php echo $team[mp]; ?>
+    <?php echo $team['mp']; ?>
     <pre><?php print_r ($moi); ?></pre>
     <p>
         Il se passe quoi maintenant si je rajoute un élément au tableau "$papa" dont la clef est "fils" et qui équivaut à "$moi"?<br>
         Une brèche dans l'espace-temps?
     </p>
-    <p><?php echo "Papa a " . count($papa[hobbies]) . " hobbies. Mais on s'en fout vu que tout le monde va tomber dans la brèche." ?></p>
-    <?php $moi[lastName] = "M'Bala M'Bala"; print_r ($moi); ?>
+    <p><?php echo "Papa a " . count($papa['hobbies']) . " hobbies. Mais on s'en fout vu que tout le monde va tomber dans la brèche." ?></p>
+    <?php $moi['lastName'] = "M'Bala M'Bala"; print_r ($moi); ?>
     <p>Pas peu fier de porter ce nouveau nom de famille :)</p>
 </body>
 </html>

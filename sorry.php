@@ -85,22 +85,22 @@ function motExcuse() {
     <form class="" action="sorry.php" method="post">
         <select class="" name="gf">
             <option value=""></option>
-            <option value="f"<?php if ($_POST['gf'] == "f") {echo " selected";} ?>>La petite</option>
-            <option value="g"<?php if ($_POST['gf'] == "g") {echo " selected";} ?>>Le petit</option>
+            <option value="f"<?php if (isset($_POST['gf']) && $_POST['gf'] == "f") {echo " selected";} ?>>La petite</option>
+            <option value="g"<?php if (isset($_POST['gf']) && $_POST['gf'] == "g") {echo " selected";} ?>>Le petit</option>
         </select>
-        <input type="text" name="enfant" value="<?php echo $_POST['enfant'] ?>" placeholder="Enfant"><br>
+        <input type="text" name="enfant" value="<?php if (isset($_POST['enfant'])) {echo $_POST['enfant'];} ?>" placeholder="Enfant"><br>
         <select class="" name="pres">
             <option value=""></option>
-            <option value="Madame"<?php if ($_POST['pres'] == "Madame") {echo " selected";} ?>>Madame</option>
-            <option value="Monsieur"<?php if ($_POST['pres'] == "Monsieur") {echo " selected";} ?>>Monsieur</option>
+            <option value="Madame"<?php if (isset($_POST['pres']) && $_POST['pres'] == "Madame") {echo " selected";} ?>>Madame</option>
+            <option value="Monsieur"<?php if (isset($_POST['pres']) && $_POST['pres'] == "Monsieur") {echo " selected";} ?>>Monsieur</option>
         </select>
-        <input type="text" name="prof" value="<?php echo $_POST['prof'] ?>" placeholder="Prof"><br>
+        <input type="text" name="prof" value="<?php if (isset($_POST['prof'])) {echo $_POST['prof'];} ?>" placeholder="Prof"><br>
         <br>
-        <input type="radio" name="excuse" value="maladie"<?php if ($_POST['excuse'] == "maladie") {echo " checked";} ?>>Maladie<br>
-        <input type="radio" name="excuse" value="deces"<?php if ($_POST['excuse'] == "deces") {echo " checked";} ?>>Décès<br>
-        <input type="radio" name="excuse" value="activite"<?php if ($_POST['excuse'] == "activite") {echo " checked";} ?>>Activité extra-scolaire<br>
-        <input type="radio" name="excuse" value="demotivation"<?php if ($_POST['excuse'] == "demotivation") {echo " checked";} ?>>Démotivation<br>
-        <input type="radio" name="excuse" value="principe"<?php if ($_POST['excuse'] == "principe") {echo " checked";} ?>>Question de principe<br>
+        <input type="radio" name="excuse" value="maladie"<?php if (isset($_POST['excuse']) && $_POST['excuse'] == "maladie") {echo " checked";} ?>>Maladie<br>
+        <input type="radio" name="excuse" value="deces"<?php if (isset($_POST['excuse']) && $_POST['excuse'] == "deces") {echo " checked";} ?>>Décès<br>
+        <input type="radio" name="excuse" value="activite"<?php if (isset($_POST['excuse']) && $_POST['excuse'] == "activite") {echo " checked";} ?>>Activité extra-scolaire<br>
+        <input type="radio" name="excuse" value="demotivation"<?php if (isset($_POST['excuse']) && $_POST['excuse'] == "demotivation") {echo " checked";} ?>>Démotivation<br>
+        <input type="radio" name="excuse" value="principe"<?php if (isset($_POST['excuse']) && $_POST['excuse'] == "principe") {echo " checked";} ?>>Question de principe<br>
         <br>
         <button type="submit" name="button" value="Go!">Go!</button>
     </form>
