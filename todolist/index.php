@@ -4,6 +4,10 @@ if(file_exists('todo.json'))
     $oldDataJSON = file_get_contents('todo.json');
     $oldData = json_decode($oldDataJSON, true);
     if (isset($_POST['task']) && $_POST['task'] != "") {
+        // foreach ($oldData as $value) {
+        //     $lastKey = key($oldData);
+        // }
+        // $nextKey = $lastKey+1;
         $firstTask['task'] = $_POST['task'];
         $firstTask['done'] = $_POST["done"];
         $extraData[0] = $firstTask;

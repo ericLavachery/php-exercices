@@ -6,13 +6,13 @@
         if ($value['done'] != 'yes') {
             $newLine = '<input type="checkbox" name="xxx" value="yes">';
             $newLine = $newLine . $value['task'] . "<br>";
+            // echo key($oldData);
             echo $newLine;
         }
     }
     ?>
 
     <br>
-
 
         <button type="submit" name="fait">Enregistrer</button>
     </form>
